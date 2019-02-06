@@ -1,17 +1,19 @@
 import React from 'react';
-class CommunityChest extends React.Component {
+import './Go.scss';
+
+class Go extends React.Component {
   constructor(props) {
     super(props);
 
   }
   render(){
     return (
-      <div>
-        Community Chest
+      <div class="Go">
+        Go
       </div>
     )
 
   }
 }
 
-export default CommunityChest
+export default Go

@@ -1,0 +1,21 @@
+@import '../colors';
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500');
+
+@mixin boardSpace() {
+    background: #fafaf8;
+    text-align: center;
+    color: #080808;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+
+  	.color-bar {
+  		height: 25px;
+  		border-bottom: 2px solid $black;
+  	}
+
+  	.name {
+  		padding-bottom: 50px;
+  	}
+}
