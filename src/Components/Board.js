@@ -1,19 +1,16 @@
 import React from 'react';
-import boardSpaces from '../configs/boardSpaces'
+import { connect } from 'react-redux';
+
 import './Board.scss';
 
 class Board extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render(){
-
     return (
       <div class="board">
         <div class="center" />
         <div class="boardSpaces">
           {
-            boardSpaces.map(function(boardSpace) {
+            this.props.boardSpaces.map(function(boardSpace) {
                 return   <boardSpace.type name={boardSpace.name} color={boardSpace.color}/>
             })
           }
@@ -24,4 +21,11 @@ class Board extends React.Component {
   }
 }
 
-export default Board
+const mapStateToProps = (state) => {
+  return {
+    boardSpaces: state.boardSpaces,
+    renderCount: state.test
+  }
+}
+
+export default  connect(mapStateToProps)(Board);
