@@ -1,8 +1,0 @@
-@import 'mixins';
-
-.Go{
-  @include boardSpace();
-  grid-column: 11;
-  grid-row: 11 / 12;
-  position: relative;
-}
