@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #1a1a2e;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-500 disabled:bg-gray-700 disabled:text-gray-500
+           text-white font-semibold px-4 py-2 rounded-lg transition-colors
+           disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 disabled:text-gray-600
+           text-white font-semibold px-4 py-2 rounded-lg transition-colors
+           disabled:cursor-not-allowed;
+  }
+}
